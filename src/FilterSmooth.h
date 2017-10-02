@@ -7,19 +7,15 @@
 // ----------------------------------------------------------------------------
 #ifndef FILTER_SMOOTH_H
 #define FILTER_SMOOTH_H
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
+#include <Arduino.h>
 #include <util/atomic.h>
 
 
 template <uint8_t sample_count_>
-class FilterMean
+class FilterSmooth
 {
 public:
-  FilterMean();
+  FilterSmooth();
   void addSample(const int &value);
   int getFilteredValue();
 private:
@@ -27,6 +23,6 @@ private:
   uint8_t index_;
   long total_;
 };
-#include "FilterSmoothDefinitions.h"
+#include "FilterSmooth/FilterSmoothDefinitions.h"
 
 #endif

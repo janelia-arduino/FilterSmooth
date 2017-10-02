@@ -10,7 +10,7 @@
 
 
 template <uint8_t sample_count_>
-FilterMean<sample_count_>::FilterMean()
+FilterSmooth<sample_count_>::FilterSmooth()
 {
   for (int i=0;i<sample_count_;++i)
   {
@@ -21,7 +21,7 @@ FilterMean<sample_count_>::FilterMean()
 }
 
 template <uint8_t sample_count_>
-void FilterMean<sample_count_>::addSample(const int &value)
+void FilterSmooth<sample_count_>::addSample(const int &value)
 {
   ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
   {
@@ -33,7 +33,7 @@ void FilterMean<sample_count_>::addSample(const int &value)
 }
 
 template <uint8_t sample_count_>
-int FilterMean<sample_count_>::getFilteredValue()
+int FilterSmooth<sample_count_>::getFilteredValue()
 {
   int filtered_value = 0;
   ATOMIC_BLOCK(ATOMIC_RESTORESTATE)

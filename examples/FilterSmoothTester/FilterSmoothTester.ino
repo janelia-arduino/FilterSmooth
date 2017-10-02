@@ -1,9 +1,9 @@
-#include "Arduino.h"
-#include "Streaming.h"
-#include "FilterSmooth.h"
+#include <Arduino.h>
+#include <Streaming.h>
+#include <FilterSmooth.h>
 
 
-const int BAUDRATE = 9600;
+const long BAUDRATE = 115200;
 const int SAMPLE_COUNT = 100;
 const int SENSOR_PIN = 0;
 

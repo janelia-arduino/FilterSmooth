@@ -5,4 +5,4 @@
 // Authors:
 // Peter Polidoro polidorop@janelia.hhmi.org
 // ----------------------------------------------------------------------------
-#include "FilterSmooth.h"
+#include "../FilterSmooth.h"
