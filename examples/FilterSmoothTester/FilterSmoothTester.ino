@@ -3,7 +3,7 @@
 #include <FilterSmooth.h>
 
 
-const long BAUDRATE = 115200;
+const long BAUD = 115200;
 const int SAMPLE_COUNT = 100;
 const int SENSOR_PIN = 0;
 
@@ -12,7 +12,7 @@ FilterSmooth<SAMPLE_COUNT> filter;
 
 void setup()
 {
-  Serial.begin(BAUDRATE);
+  Serial.begin(BAUD);
   delay(2000);
 }
 
